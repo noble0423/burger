@@ -16,7 +16,7 @@ var orm = {
 
         var queryString = "INSERT INTO ?? (??) VALUES (?);";
 
-        connection.query(queryString, [cols, vals], function(err, result) {
+        connection.query(queryString, [table, cols, vals], function(err, result) {
             if (err) {
                 throw err;
             }
