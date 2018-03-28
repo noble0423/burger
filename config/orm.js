@@ -19,9 +19,7 @@ function objToSql(ob) {
             arr.push(key + "=" + value);
         }
     }
-  
     // translate array of strings to a single comma-separated string
-    console.log(arr);
     return arr.toString();
 }
 
@@ -47,7 +45,6 @@ var orm = {
         });
     },
     update: function(table, objColVals, condition, cb) {
-        // var queryString = "UPDATE ?? SET ?? WHERE ??;";
         var queryString = "UPDATE " + table;
 
         queryString += " SET ";
@@ -56,7 +53,6 @@ var orm = {
         queryString += condition;
         queryString += ";";
 
-        console.log(queryString);
         connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;
@@ -67,7 +63,6 @@ var orm = {
     delete: function(table, condition, cb) {
         var queryString = "DELETE FROM " + table + " WHERE " + condition + ";";
 
-        console.log(queryString);
         connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;

@@ -7,10 +7,7 @@ var burger = {
             cb(res);
         });
     },
-    // cols and values are arrays
     create: function(cols, vals, cb) {
-        console.log(cols);
-        console.log(vals);
         orm.create("burgers", cols, vals, function(res) {
             cb(res);
         });

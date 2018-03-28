@@ -7,7 +7,6 @@ $(function() {
         var newDevourState = {
             devoured: newDevour
         };
-        console.log(newDevourState);
 
         // Send the PUT request
         $.ajax("/api/burgers/" + id, {
@@ -15,7 +14,7 @@ $(function() {
             data: newDevourState
         }).then(
             function() {
-                console.log("devoured", newDevour);
+                alert("Mmmmm. That IS a TASTY burger!");
                 // Reload the page to get the updated list
                 location.reload();
             }
@@ -43,7 +42,6 @@ $(function() {
 
     $(".delete-burger").on("click", function(event) {
         var id = $(this).data("id");
-        console.log("clicked" + id);
 
         // Send the DELETE request.
         $.ajax("/api/burgers/" + id, {

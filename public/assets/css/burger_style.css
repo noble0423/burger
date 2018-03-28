@@ -1,9 +1,35 @@
+* {
+    font-family: 'Barrio';
+}
+
 body {
     background: url("../img/fast-food.jpg");
-    /* background: url("../img/paintedburger.jpeg"); */
-    /* background: url("../img/burger-ertan-aktas.jpg"); */
-    /* background: url("../img/burger-border-1486664128hxf.jpg"); */
-    /* background: url("../img/burgerandfries.jpeg"); */
     background-size: 100%;
-    /* width: 100%; */
+}
+
+h2 {
+    text-shadow: 3px 2px 5px red;
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+    background-color: rgba(500, 245, 245, .1);
+    padding: 5px;
+    margin: 4px;
+    box-shadow: 12px 8px 20px 4px saddlebrown;
+    text-shadow: 4px 4px 8px saddlebrown;
+}
+
+#add-title {
+    text-align: center;
+}
+
+.form-group {
+    text-align: center;
+}
+
+button {
+    background-color: goldenrod;
+    border: outset;
+    border-radius: 5px;
+
 }
